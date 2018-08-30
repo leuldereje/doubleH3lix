@@ -25,7 +25,6 @@
 		87F9E9972039C51900C90C05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F9E9962039C51900C90C05 /* ViewController.m */; };
 		87F9E99C2039C51900C90C05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87F9E99B2039C51900C90C05 /* Assets.xcassets */; };
 		87F9E9A22039C51900C90C05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F9E9A12039C51900C90C05 /* main.m */; };
-		87F9E9AA2039C5AC00C90C05 /* jbresources in Resources */ = {isa = PBXBuildFile; fileRef = 87F9E9A82039C5AB00C90C05 /* jbresources */; };
 		87F9E9AD2039C66500C90C05 /* jailbreak.mm in Sources */ = {isa = PBXBuildFile; fileRef = 87F9E9AC2039C66500C90C05 /* jailbreak.mm */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		6848D0FE203CE91700A0FFE2 /* v0rtex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v0rtex.h; sourceTree = "<group>"; };
 		6848D0FF203CE91700A0FFE2 /* v0rtex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = v0rtex.m; sourceTree = "<group>"; };
 		6848D103203CE93100A0FFE2 /* liboffsetfinder64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liboffsetfinder64.a; path = doubleH3lix/liboffsetfinder64.a; sourceTree = "<group>"; };
-		6848D105203CE95200A0FFE2 /* liboffsetfinder64.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = liboffsetfinder64.hpp; sourceTree = "<group>"; };
 		68805417203CEB060003A817 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = "<group>"; };
 		87149C6C204872DB009658CA /* Cydia-10.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; name = "Cydia-10.tar"; path = "doubleH3lix/jbresources/Cydia-10.tar"; sourceTree = "<group>"; };
 		8757D090203CF2CB00B3A566 /* libapple_crypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libapple_crypto.tbd; path = usr/lib/libapple_crypto.tbd; sourceTree = SDKROOT; };
@@ -59,7 +57,6 @@
 		87F9E99E2039C51900C90C05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87F9E9A02039C51900C90C05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87F9E9A12039C51900C90C05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		87F9E9A82039C5AB00C90C05 /* jbresources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jbresources; sourceTree = "<group>"; };
 		87F9E9A92039C5AB00C90C05 /* ui resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "ui resources"; sourceTree = "<group>"; };
 		87F9E9AC2039C66500C90C05 /* jailbreak.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = jailbreak.mm; sourceTree = "<group>"; };
 		87F9E9AE2039C66D00C90C05 /* jailbreak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jailbreak.h; sourceTree = "<group>"; };
@@ -132,12 +129,10 @@
 				6848D0FD203CE91700A0FFE2 /* offsets.mm */,
 				6848D0FE203CE91700A0FFE2 /* v0rtex.h */,
 				6848D0FF203CE91700A0FFE2 /* v0rtex.m */,
-				6848D105203CE95200A0FFE2 /* liboffsetfinder64.hpp */,
 				87F9E9982039C51900C90C05 /* Main.storyboard */,
 				87F9E99B2039C51900C90C05 /* Assets.xcassets */,
 				87F9E99D2039C51900C90C05 /* LaunchScreen.storyboard */,
 				87F9E9A02039C51900C90C05 /* Info.plist */,
-				87F9E9A82039C5AB00C90C05 /* jbresources */,
 				87F9E9A92039C5AB00C90C05 /* ui resources */,
 				87F9E9A12039C51900C90C05 /* main.m */,
 			);
@@ -206,7 +201,6 @@
 				87149C6D204872DB009658CA /* Cydia-10.tar in Resources */,
 				875D1310203F4215007B798C /* launchctl in Resources */,
 				875D130A203F41FA007B798C /* banner.png in Resources */,
-				87F9E9AA2039C5AC00C90C05 /* jbresources in Resources */,
 				872C2D6C203EE37600929D9E /* Main.storyboard in Resources */,
 				87EEF947203F188800663566 /* ui resources in Resources */,
 				8786D4FB203E12F900962200 /* LaunchScreen.storyboard in Resources */,
@@ -367,12 +361,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/external/liboffsetfinder64/include";
 				INFOPLIST_FILE = doubleH3lix/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/doubleH3lix",
+					"$(PROJECT_DIR)/doubleH3lix/libs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.tihmstar.doubleH3lix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,12 +387,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/external/liboffsetfinder64/include";
 				INFOPLIST_FILE = doubleH3lix/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/doubleH3lix",
+					"$(PROJECT_DIR)/doubleH3lix/libs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.tihmstar.doubleH3lix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
